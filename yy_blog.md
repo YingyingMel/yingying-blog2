@@ -2353,6 +2353,12 @@ const Publish = () => {
 
 ![image-20220531111208021](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220531111208021.png)
 
+上传存在本地服务器的图片截图
+
+![image-20220627134706686](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220627134706686.png)
+
+
+
 
 
 ## 5.切换图片Type
@@ -2680,9 +2686,23 @@ YY笔记：表单和图片回填
   }, [articalId])
 ```
 
-http.get返回的res
+http.get返回的res，图片存在黑马
 
 ![image-20220601000632101](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220601000632101.png)
+
+http.get返回的res，图片存在本地
+
+![image-20220627134004303](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220627134004303.png)
+
+article列表渲染时获取图片
+
+**console.log(JSON.parse(images))**
+
+![image-20220627140854641](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220627140854641.png)
+
+![image-20220627140938960](C:\Users\yingy\AppData\Roaming\Typora\typora-user-images\image-20220627140938960.png)
+
+
 
 ## 12. 编辑文章-回显Upload相关
 
@@ -2959,3 +2979,38 @@ export default App
 
 我们可以在打包之后，通过切换路由，监控network面板资源的请求情况，验证是否分隔成功
 
+#### 添加一个新页面shopping cart
+
+新建文件夹和文件 src/pages/shoppingcart， index.js, index.scss
+
+```js
+//index.js
+import React from 'react'
+
+const ShoppingCart = () => {
+  return (
+    <div>shoppingcart</div>
+  )
+}
+
+export default ShoppingCart
+
+```
+
+在app.js里新增路由并导入
+
+```js
+const ShoppingCart = lazy(() => import('@/pages/shoppingcart'))
+
+<Route path='/shoppingcart' element={<ShoppingCart />}></Route>
+```
+
+layout.js页面顶端导航栏新增一个tab,
+
+```js
+//在最后一行新增一个label shoppingcart, 更改icon
+const items = [
+...
+  { label: (<Link to='/shoppingcart'>Shopping Cart</Link>), icon: <ShoppingCartOutlined />, key: '/shoppingcart' },
+]
+```
