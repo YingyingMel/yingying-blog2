@@ -42,34 +42,36 @@ const Login = () => {
           <Form.Item
             label="Mobile number"
             name="username"
-            rules={[
-              {
-                required: true,
-                message: 'Please input my number: 0426580613',
-              },
-              {
-                pattern: /^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$/,
-                message: 'Wrong mobile number',
-                validateTrigger: 'onBlur'
-              }
-            ]}>
-            <Input size="large" defaultValue="0426580613" placeholder='0426580613' />
+          // rules={[
+          //   {
+          //     required: true,
+          //     message: 'Please input my number: 0426580613',
+          //   },
+          //   {
+          //     pattern: /^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$/,
+          //     message: 'Wrong mobile number',
+          //     validateTrigger: 'onBlur'
+          //   }
+          // ]}
+          >
+            <Input size="large" value="0426580613" placeholder='0426580613' disabled />
           </Form.Item>
           <Form.Item
             label="Password"
             name="password"
-            rules={[
-              {
-                required: true,
-                message: 'Please input this password: 246810',
-              },
-              {
-                len: 6,
-                message: 'Password is 6 digits',
-                validateTrigger: 'onBlur'
-              }
-            ]}>
-            <Input size="large" defaultValue="246810" placeholder='246810' />
+          // rules={[
+          //   {
+          //     required: true,
+          //     message: 'Please input this password: 246810',
+          //   },
+          //   {
+          //     len: 6,
+          //     message: 'Password is 6 digits',
+          //     validateTrigger: 'onBlur'
+          //   }
+          // ]}
+          >
+            <Input size="large" value="246810" placeholder='246810' disabled />
           </Form.Item>
           <Form.Item
             wrapperCol={{ offset: 8 }}
