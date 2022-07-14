@@ -14,8 +14,8 @@ const Login = () => {
     //console.log(values)
     try {
       await loginStore.getToken({
-        username: values.username, //或者写成：const {username, password} = values; 
-        password: values.password      //loginStore.getToken({username, password})
+        username: '0426580613', //或者写成：const {username, password} = values; 
+        password: '246810'      //loginStore.getToken({username, password})
       })
       //跳转首页
       navigate('/', { replace: true })
