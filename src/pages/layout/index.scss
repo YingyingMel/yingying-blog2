@@ -4,6 +4,9 @@
   height: 60px;
   background: url('~@/assets/logo.png') no-repeat center / 200px auto;
 }
+.content {
+  padding: 0 50px;
+}
 
 .site-layout-content {
   height: 100%;
@@ -31,4 +34,44 @@
   padding-right: 50px;
   color: #fff;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .content {
+    padding: 0 0;
+  }
+  .header {
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0 0;
+    line-height: 2.5rem;
+    .logo {
+      flex: 6;
+      transform: translateY(-20%);
+      margin-left: 0.5rem;
+      background: url('~@/assets/logo.png') no-repeat center / contain;
+    }
+    .menu {
+      flex: 11;
+      overflow: hidden;
+    }
+    .user-info {
+      flex: 2;
+      overflow: hidden;
+      position: relative;
+      padding-right: 0.1rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-item,
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .ant-layout-footer {
+    padding: 0.5rem;
+  }
 }

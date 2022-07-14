@@ -47,5 +47,32 @@
   }
   .rightside {
     flex: 70%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    .leftside {
+      .avatar-logo {
+        margin-top: 0.1rem;
+      }
+      .skill-labels {
+        margin-top: 0.1rem auto;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+      }
+    }
+    .rightside {
+      margin-top: 1rem;
+      text-align: justify;
+    }
+  }
+
+  .site-layout-content {
+    width: 100%;
+    padding: 0.3rem 0.5rem;
   }
 }

@@ -55,15 +55,17 @@ const LayoutPage = () => {
 
   return (
     <Layout className='layout'>
-      <Header>
+      <Header className='header'>
         <div className="logo" />
-        <Menu
-          mode="horizontal"
-          theme="dark"
-          selectedKeys={[pathname]}
-          style={{ height: '100%', borderRight: 0 }}
-          items={items}
-        />
+        <div className='menu'>
+          <Menu
+            mode="horizontal"
+            theme="dark"
+            selectedKeys={[pathname]}
+            style={{ height: '100%', borderRight: 0 }}
+            items={items}
+          />
+        </div>
         <div className="user-info">
 
           <Popconfirm
@@ -76,7 +78,7 @@ const LayoutPage = () => {
 
         </div>
       </Header>
-      <Content style={{ padding: '0 50px' }}>
+      <Content className='content'>
 
         <div className="site-layout-content">
           {/* 二级路由出口 */}
