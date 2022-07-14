@@ -7,7 +7,7 @@ const Basket = (props) => {
   const shippingPrice = itemsPrice > 2000 ? 0 : 20
   const totalPrice = itemsPrice + taxPrice + shippingPrice
   return (
-    <aside className='block col-1'>
+    <aside className='basket'>
       <h2>Cart Items</h2>
       <div>{cartItem.length === 0 && <div>Cart is empty</div>}</div>
       {cartItem.map((item) => {

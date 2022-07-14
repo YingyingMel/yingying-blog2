@@ -48,7 +48,7 @@ const ShoppingCart = () => {
           </a>
         </div>
       </header>
-      <div className='row'>
+      <div className='row products'>
         <Main products={products} onAdd={onAdd}></Main>
         <Basket onAdd={onAdd} onRemove={onRemove} cartItem={cartItem}></Basket>
 

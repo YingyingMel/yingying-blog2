@@ -4,9 +4,9 @@ import Product from './product'
 const Main = (props) => {
   const { products, onAdd } = props
   return (
-    <div className='block col-2'>
+    <div className='main'>
       <h2>Products</h2>
-      <div className='row'>
+      <div className='products'>
         {products.map((item) => {
           return <Product key={item.id} product={item} onAdd={onAdd}></Product>
         })}
